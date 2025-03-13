@@ -15,7 +15,7 @@ Clone the repository:
 sh
 Copy
 Edit
-git clone https://github.com/srikargoud2002/Mid_Term
+git clone https://github.com/Mahathma-b5/Midterm.git
 Navigate to the project directory:
 sh
 Copy
