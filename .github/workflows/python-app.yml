@@ -35,4 +35,3 @@ jobs:
       run: |
         pip install pytest-cov
         pytest --cov=./ --cov-report=xml --junitxml=junit/test-results.xml
-
