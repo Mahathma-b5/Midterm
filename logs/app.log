@@ -1,0 +1,106 @@
+2025-03-13 06:27:10,887 - setup_test - INFO - Logging configured successfully with level DEBUG at ./logs/app.log
+2025-03-13 06:27:10,887 - app - INFO - Application is Starting
+2025-03-13 06:27:10,887 - app - INFO - Starting plugin loading process
+2025-03-13 06:27:10,890 - app - INFO - Registered command: Menu
+2025-03-13 06:27:10,892 - app - INFO - Registered command: add
+2025-03-13 06:27:10,892 - app - INFO - Registered command: divide
+2025-03-13 06:27:10,892 - app - INFO - Registered command: exit
+2025-03-13 06:27:11,012 - app - INFO - Registered command: history_clear
+2025-03-13 06:27:11,012 - app - INFO - Registered command: history_load
+2025-03-13 06:27:11,013 - app - INFO - Registered command: history_save
+2025-03-13 06:27:11,013 - app - INFO - Registered command: history_show
+2025-03-13 06:27:11,013 - app - INFO - Registered command: last_operation
+2025-03-13 06:27:11,013 - app - INFO - Registered command: multiply
+2025-03-13 06:27:11,013 - app - INFO - Registered command: subtract
+2025-03-13 06:27:11,013 - app - INFO - Application initialized
+2025-03-13 06:27:11,013 - app - INFO - Starting REPL interface
+2025-03-13 06:27:19,253 - app - DEBUG - User input: menu
+2025-03-13 06:27:30,443 - app - DEBUG - User input: add 5 4
+2025-03-13 06:27:37,826 - app - DEBUG - User input: subtract 5 8
+2025-03-13 06:27:44,460 - app - DEBUG - User input: divide 4 9
+2025-03-13 06:27:59,660 - app - DEBUG - User input: multiply 6 8
+2025-03-13 06:28:09,514 - app - DEBUG - User input: divide 0 7
+2025-03-13 06:28:20,125 - app - DEBUG - User input: divide 7 0
+2025-03-13 06:28:41,723 - app - DEBUG - User input: history_show
+2025-03-13 06:28:41,723 - app.plugins.history_facade - DEBUG - Formatting calculation history
+2025-03-13 06:28:41,724 - app - CRITICAL - REPL session failed
+Traceback (most recent call last):
+  File "/Users/mahathmareddy/Mid_term/app/__init__.py", line 132, in run_repl
+    self._execute_command(user_input)
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "/Users/mahathmareddy/Mid_term/app/__init__.py", line 151, in _execute_command
+    command.execute(*args) if args else command.execute()
+                                        ~~~~~~~~~~~~~~~^^
+  File "/Users/mahathmareddy/Mid_term/app/plugins/history_show/__init__.py", line 8, in execute
+    entries = HistoryFacade.get_formatted_history()
+  File "/Users/mahathmareddy/Mid_term/app/plugins/history_facade.py", line 42, in get_formatted_history
+    f"{record.x} {record.symbol} {record.y} = {record.execute()}"
+                                               ~~~~~~~~~~~~~~^^
+  File "/Users/mahathmareddy/Mid_term/calculator/calculation.py", line 25, in execute
+    return self.operation(self.x, self.y)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/mahathmareddy/Mid_term/calculator/operations.py", line 25, in div_numbers
+    raise ValueError("Cannot divide by zero")
+ValueError: Cannot divide by zero
+2025-03-13 06:34:47,750 - setup_test - INFO - Logging configured successfully with level DEBUG at ./logs/app.log
+2025-03-13 06:34:47,751 - app - INFO - Application is Starting
+2025-03-13 06:34:47,751 - app - INFO - Starting plugin loading process
+2025-03-13 06:34:47,756 - app - INFO - Registered command: Menu
+2025-03-13 06:34:47,760 - app - INFO - Registered command: add
+2025-03-13 06:34:47,761 - app - INFO - Registered command: divide
+2025-03-13 06:34:47,761 - app - INFO - Registered command: exit
+2025-03-13 06:34:48,021 - app - INFO - Registered command: history_clear
+2025-03-13 06:34:48,022 - app - INFO - Registered command: history_load
+2025-03-13 06:34:48,022 - app - INFO - Registered command: history_save
+2025-03-13 06:34:48,022 - app - INFO - Registered command: history_show
+2025-03-13 06:34:48,023 - app - INFO - Registered command: last_operation
+2025-03-13 06:34:48,023 - app - INFO - Registered command: multiply
+2025-03-13 06:34:48,023 - app - INFO - Registered command: subtract
+2025-03-13 06:34:48,023 - app - INFO - Application initialized
+2025-03-13 06:34:48,023 - app - INFO - Starting REPL interface
+2025-03-13 06:35:02,382 - app - DEBUG - User input: history_show
+2025-03-13 06:35:02,382 - app.plugins.history_facade - DEBUG - Formatting calculation history
+2025-03-13 06:35:12,126 - app - DEBUG - User input: add 5 0
+2025-03-13 06:35:18,369 - app - DEBUG - User input: subtract 7 2
+2025-03-13 06:35:26,005 - app - DEBUG - User input: history_show
+2025-03-13 06:35:26,006 - app.plugins.history_facade - DEBUG - Formatting calculation history
+2025-03-13 06:35:41,529 - app - DEBUG - User input: history_save
+2025-03-13 06:35:41,529 - app.plugins.history_facade - DEBUG - Using history directory: calculator_history
+2025-03-13 06:35:41,530 - app.plugins.history_facade - INFO - Created history directory at /Users/mahathmareddy/Mid_term/calculator_history
+2025-03-13 06:35:41,530 - app.plugins.history_facade - INFO - Saving 2 records to calculator_history/calculator_history_20250313_063541.csv
+2025-03-13 06:35:41,541 - app.plugins.history_facade - DEBUG - CSV file created successfully at calculator_history/calculator_history_20250313_063541.csv
+2025-03-13 06:37:41,464 - app - DEBUG - User input: history_load
+2025-03-13 06:37:41,465 - app.plugins.history_facade - DEBUG - Using history directory: calculator_history
+2025-03-13 06:37:41,465 - app.plugins.history_facade - INFO - Created history directory at /Users/mahathmareddy/Mid_term/calculator_history
+2025-03-13 06:37:41,466 - app.plugins.history_facade - DEBUG - Found 1 CSV files in history directory
+2025-03-13 06:37:44,010 - app.plugins.history_facade - INFO - Attempting to load history from calculator_history_20250313_063541.csv
+2025-03-13 06:37:44,010 - app.plugins.history_facade - DEBUG - Using history directory: calculator_history
+2025-03-13 06:37:44,011 - app.plugins.history_facade - INFO - Created history directory at /Users/mahathmareddy/Mid_term/calculator_history
+2025-03-13 06:37:44,016 - app.plugins.history_facade - INFO - Cleared existing history before import
+2025-03-13 06:37:44,018 - app.plugins.history_facade - DEBUG - Formatting calculation history
+2025-03-13 06:37:44,018 - app.plugins.history_facade - INFO - Successfully loaded 2 records from calculator_history_20250313_063541.csv
+2025-03-13 06:37:50,317 - app - DEBUG - User input: history_clear
+2025-03-13 06:37:50,318 - app.plugins.history_facade - INFO - Clearing operation history
+2025-03-13 07:08:16,238 - setup_test - INFO - Logging configured successfully with level DEBUG  # INFO, WARNING, ERROR, CRITICAL at ./logs/app.log
+2025-03-13 07:08:16,238 - app - INFO - Application is Starting
+2025-03-13 07:08:16,238 - app - INFO - Starting plugin loading process
+2025-03-13 07:08:16,244 - app - INFO - Registered command: Menu
+2025-03-13 07:08:16,262 - app - INFO - Registered command: add
+2025-03-13 07:08:16,263 - app - INFO - Registered command: divide
+2025-03-13 07:08:16,263 - app - INFO - Registered command: exit
+2025-03-13 07:08:16,500 - app - INFO - Registered command: history_clear
+2025-03-13 07:08:16,500 - app - INFO - Registered command: history_load
+2025-03-13 07:08:16,500 - app - INFO - Registered command: history_save
+2025-03-13 07:08:16,501 - app - INFO - Registered command: history_show
+2025-03-13 07:08:16,501 - app - INFO - Registered command: last_operation
+2025-03-13 07:08:16,501 - app - INFO - Registered command: multiply
+2025-03-13 07:08:16,502 - app - INFO - Registered command: subtract
+2025-03-13 07:08:16,502 - app - INFO - Application initialized
+2025-03-13 07:08:16,502 - app - INFO - Starting REPL interface
+2025-03-13 07:09:26,768 - app.plugins.history_facade - INFO - Created history directory at /Users/mahathmareddy/Mid_term/calculator_history
+2025-03-13 07:09:26,770 - app.plugins.history_facade - INFO - Saving 2 records to calculator_history/calculator_history_20250313_070926.csv
+2025-03-13 07:09:41,227 - app.plugins.history_facade - INFO - Created history directory at /Users/mahathmareddy/Mid_term/calculator_history
+2025-03-13 07:09:43,709 - app.plugins.history_facade - INFO - Attempting to load history from calculator_history_20250313_063541.csv
+2025-03-13 07:09:43,710 - app.plugins.history_facade - INFO - Created history directory at /Users/mahathmareddy/Mid_term/calculator_history
+2025-03-13 07:09:43,715 - app.plugins.history_facade - INFO - Cleared existing history before import
+2025-03-13 07:09:43,717 - app.plugins.history_facade - INFO - Successfully loaded 2 records from calculator_history_20250313_063541.csv
