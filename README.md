@@ -39,15 +39,25 @@ This will launch the REPL (Read-Eval-Print Loop) interface, where users can perf
 Commands
 
 menu – Displays all available plugins, allowing users to explore functionalities dynamically.
+
 add <operand1> <operand2> – Adds two numbers and returns the result.
+
 subtract <operand1> <operand2> – Subtracts the second number from the first.
+
 multiply <operand1> <operand2> – Multiplies two numbers and returns the result.
+
 divide <operand1> <operand2> – Divides the first number by the second.
+
 history_show – Retrieves and displays all previous calculations.
+
 history_clear – Clears all stored historical calculations.
+
 history_save – Saves the entire calculation history to a CSV file, including a timestamp for tracking.
+
 history_load – Loads previously saved calculations from CSV files.
+
 last_op – Displays details of the most recent operation performed.
+
 exit – Closes the calculator application and terminates the REPL session.
 
 Plugins
