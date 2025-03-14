@@ -16,31 +16,13 @@ Follow these steps to set up the calculator application:
 
 Clone the repository:
 
-sh
-
-Copy
-
-Edit
-
 git clone https://github.com/Mahathma-b5/Midterm.git
 
 Navigate to the project directory:
 
-sh
-
-Copy
-
-Edit
-
 cd Mid_Term
 
 Install required dependencies:
-
-sh
-
-Copy
-
-Edit
 
 pip install -r requirements.txt
 
@@ -49,12 +31,6 @@ pip install -r requirements.txt
 Usage
 
 To start the calculator, run:
-
-sh
-
-Copy
-
-Edit
 
 python main.py
 
