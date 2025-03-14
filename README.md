@@ -89,7 +89,8 @@ ENVIRONMENT=DEVELOPMENT  # Can be set to DEVELOPMENT or PRODUCTION
 
 Testing & Coverage
 
-To validate the functionality of the application, run:
+To validate the functionality of the application, 
+run:
 
 sh
 Copy
