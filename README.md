@@ -38,6 +38,9 @@ This will launch the REPL (Read-Eval-Print Loop) interface, where users can perf
 
 Commands
 
+
+
+
 menu – Displays all available plugins, allowing users to explore functionalities dynamically.
 
 add <operand1> <operand2> – Adds two numbers and returns the result.
@@ -128,9 +131,13 @@ Edit
 def get_value(dictionary, key):
 
     if key in dictionary:  # Checking before accessing
+    
         return dictionary[key]
+        
     else:
+    
         print(f"Key '{key}' not found in dictionary")
+        
         return None
         
 Here, the function checks if the key exists in the dictionary before accessing it to prevent an error.
@@ -147,8 +154,11 @@ def get_value(dictionary, key):
     try:
     
         return dictionary[key]  # Attempting without checking
+        
     except KeyError:
+    
         print(f"Key '{key}' not found in dictionary")
+        
         return None
         
 Here, instead of checking if the key exists first, the function tries accessing it directly and catches the error if it occurs.
