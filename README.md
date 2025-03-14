@@ -7,33 +7,57 @@ This midterm assignment focuses on developing a Python-based calculator applicat
 Prerequisites
 
 Python (Ensure Python is installed and added to the system path)
+
 pip (Required for installing dependencies)
+
 Installation
+
 Follow these steps to set up the calculator application:
 
 Clone the repository:
+
 sh
+
 Copy
+
 Edit
+
 git clone https://github.com/Mahathma-b5/Midterm.git
+
 Navigate to the project directory:
+
 sh
+
 Copy
+
 Edit
+
 cd Mid_Term
+
 Install required dependencies:
+
 sh
+
 Copy
+
 Edit
+
 pip install -r requirements.txt
+
 (This ensures all necessary libraries, including Pandas and pytest, are installed.)
+
 Usage
+
 To start the calculator, run:
 
 sh
+
 Copy
+
 Edit
+
 python main.py
+
 This will launch the REPL (Read-Eval-Print Loop) interface, where users can perform arithmetic operations, manage calculation history, and access additional plugin-based functionalities.
 
 Commands
