@@ -126,11 +126,13 @@ python
 Copy
 Edit
 def get_value(dictionary, key):
+
     if key in dictionary:  # Checking before accessing
         return dictionary[key]
     else:
         print(f"Key '{key}' not found in dictionary")
         return None
+        
 Here, the function checks if the key exists in the dictionary before accessing it to prevent an error.
 
 EAFP (Easier to Ask for Forgiveness than Permission)
@@ -143,10 +145,16 @@ Copy
 Edit
 def get_value(dictionary, key):
     try:
+    
         return dictionary[key]  # Attempting without checking
     except KeyError:
         print(f"Key '{key}' not found in dictionary")
         return None
+        
 Here, instead of checking if the key exists first, the function tries accessing it directly and catches the error if it occurs.
 
 Both approaches are commonly used in Python, with EAFP being the more "Pythonic" way, as it relies on exception handling rather than explicit condition checks.
+
+Presentation Link: 
+
+https://drive.google.com/file/d/1nEnWmAbChE5zcQyBXC4Ab0Z6Z3pgauxg/view?usp=sharing
