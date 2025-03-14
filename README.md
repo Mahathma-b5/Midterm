@@ -175,4 +175,4 @@ Both approaches are commonly used in Python, with EAFP being the more "Pythonic"
 
 Presentation Link: 
 
-https://drive.google.com/file/d/1nEnWmAbChE5zcQyBXC4Ab0Z6Z3pgauxg/view?usp=sharing
+https://drive.google.com/file/d/1yUfEYz5tk8_KpTvcexH1ufhZa81ikDBp/view?usp=sharing
