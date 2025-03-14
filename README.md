@@ -70,14 +70,23 @@ The calculator application is designed with a dynamic plugin system, ensuring th
 Features
 
 Command-Line Interface (REPL): Provides an interactive and user-friendly interface for executing mathematical operations and managing history.
+
 Plugin-Based Architecture: Supports dynamic expansion of functionalities by allowing the loading of additional plugins.
+
 Calculation History Management with Pandas: Ensures smooth handling, storage, and retrieval of calculation records using Pandas DataFrames.
+
 Comprehensive Logging: Implements detailed logging mechanisms to track application activity, errors, and system messages.
+
 Efficient Error Handling: The application is designed to detect and manage invalid inputs, divide-by-zero errors, and other unexpected conditions gracefully.
+
 Design Patterns Implemented
+
 Facade Pattern – Utilized in history management to provide a simplified interface for interacting with stored calculations.
+
 Command Pattern – Manages execution of different arithmetic commands, promoting modularity and separation of concerns.
+
 Factory Method – Applied in calculation.py to efficiently create different types of calculation objects as needed.
+
 These patterns contribute to code maintainability, scalability, and enhanced organization. Additional details regarding their implementations can be found in the source code.
 
 Logging System
@@ -91,31 +100,30 @@ Environment Variables
 
 Environment variables are used to allow dynamic configuration of logging levels, file output paths, and other settings, making the application more adaptable and flexible.
 
-sh
-Copy
-Edit
+
 LOG_LEVEL=DEBUG   # Options: INFO, WARNING, ERROR, CRITICAL  
+
 LOG_OUTPUT=./logs/app.log  # Specifies where logs should be stored  
+
 HISTORY_PATH=./calculator_history  # Path to store calculation history  
+
 ENVIRONMENT=DEVELOPMENT  # Can be set to DEVELOPMENT or PRODUCTION  
 (These settings can be adjusted based on user requirements or deployment needs.)
 
 Testing & Coverage
 
 To validate the functionality of the application, 
+
 run:
 
-sh
-Copy
-Edit
 pytest
+
 To check code coverage and linting compliance, use:
 
-sh
-Copy
-Edit
 pytest --pylint --cov
+
 Tests ensure the calculator operates as expected, handles errors gracefully, and maintains high code quality standards.
+
 Running coverage reports helps in identifying untested parts of the codebase, improving overall reliability.
 
 EAFP & LBYL
